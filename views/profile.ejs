@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo right"><i class="large material-icons">person_pin</i></a>
+          <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li><a href="http://localhost:3000">Home Page</a></li>
+            <li><a href="http://localhost:3000/about">About Page</a></li>
+            <li><a href="http://localhost:3000/profile">Profile</a></li>
+          </ul>
+        </div>
+      </nav>
+
+
+  <h1>Bienvenido a el perfil de <%= name %></h1>
+  <p>
+    Mi nombre es <%= name %> y soy el fundador de (Placeholder).
+    Tengo <%= age %> años y soy un <%= position %>.
+  </p>
+  <ol>
+    <%
+    hobbies.forEach( function(hobby)
+    {%>
+      <li><%= hobby %></li> <%
+    }) %>
+
+  </ol>
+
+
+<link rel="stylesheet" href="stylesheets/style.css">
+
+  </body>
+</html>
