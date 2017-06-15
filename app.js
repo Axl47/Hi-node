@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
-var about = require('./routes/about');
+var order = require('./routes/order');
 var profile = require('./routes/profile');
 var signin = require('./routes/signin')
 var app = express();
@@ -23,10 +23,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/home', index);
-app.use('/about', about);
+app.use('/', index);
+app.use('/order', order);
 app.use('/profile', profile)
-app.use('/', signin)
+app.use('/signin', signin)
 //app.use()
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
